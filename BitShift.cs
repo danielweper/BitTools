@@ -14,14 +14,14 @@ public static class BitShift
     /// <param name="value">The number to shift</param>
     /// <param name="amount">The amount to shift</param>
     /// <returns><paramref name="value"/> shifted <paramref name="amount"/> to the left</returns>
-    public static byte Left(byte value, int amount) => (byte)(value << (amount & ByteShiftAmountMask));
+    public static byte Left(byte value, int amount) => (byte)(value << (amount & 0b111));
     /// <summary>
     /// Shifts <paramref name="value"/>, <paramref name="amount"/> times to the left
     /// </summary>
     /// <param name="value">The number to shift</param>
     /// <param name="amount">The amount to shift</param>
     /// <returns><paramref name="value"/> shifted <paramref name="amount"/> to the left</returns>
-    public static sbyte Left(sbyte value, int amount) => (sbyte)(value << (amount & ByteShiftAmountMask));
+    public static sbyte Left(sbyte value, int amount) => (sbyte)(value << (amount & 0b111));
     /// <summary>
     /// Shifts <paramref name="value"/>, <paramref name="amount"/> times to the left
     /// </summary>
@@ -77,14 +77,14 @@ public static class BitShift
     /// <param name="value">The number to shift</param>
     /// <param name="amount">The amount to shift</param>
     /// <returns><paramref name="value"/> shifted <paramref name="amount"/> to the right</returns>
-    public static byte Right(byte value, int amount) => (byte)(((value << ByteShiftOffset) >> (amount & ByteShiftAmountMask)) >> ByteShiftOffset);
+    public static byte Right(byte value, int amount) => (byte)(((value << ByteShiftOffset) >> (amount & 0b111)) >> ByteShiftOffset);
     /// <summary>
     /// Shifts <paramref name="value"/>, <paramref name="amount"/> times to the right, by copying the most significant bit and inserting it in the "blank" space
     /// </summary>
     /// <param name="value">The number to shift</param>
     /// <param name="amount">The amount to shift</param>
     /// <returns><paramref name="value"/> shifted <paramref name="amount"/> to the right</returns>
-    public static sbyte Right(sbyte value, int amount) => (sbyte)(((value << ByteShiftOffset) >> (amount & ByteShiftAmountMask)) >> ByteShiftOffset);
+    public static sbyte Right(sbyte value, int amount) => (sbyte)(((value << ByteShiftOffset) >> (amount & 0b111)) >> ByteShiftOffset);
     /// <summary>
     /// Shifts <paramref name="value"/>, <paramref name="amount"/> times to the right, by copying the most significant bit and inserting it in the "blank" space
     /// </summary>
