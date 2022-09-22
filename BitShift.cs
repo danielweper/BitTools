@@ -170,7 +170,7 @@ public static class BitShift
     /// <param name="value">The number to shift</param>
     /// <param name="amount">The amount to shift</param>
     /// <returns><paramref name="value"/> shifted <paramref name="amount"/> to the right</returns>
-    public static uint RightNoCopy(uint value, int amount) => (uint)(Right(value, amount) & BitMask.MakeZerosFromLeftInt(amount));
+    public static uint RightNoCopy(uint value, int amount) => (uint)(Right(value, amount) & BitContainer.IntToUInt(BitMask.MakeZerosFromLeftInt(amount)));
     /// <summary>
     /// Shifts <paramref name="value"/>, <paramref name="amount"/> times to the right, and filling the "blank" space with 0
     /// </summary>
@@ -184,5 +184,5 @@ public static class BitShift
     /// <param name="value">The number to shift</param>
     /// <param name="amount">The amount to shift</param>
     /// <returns><paramref name="value"/> shifted <paramref name="amount"/> to the right</returns>
-    public static ulong RightNoCopy(ulong value, int amount) => (ulong)(Right(value, amount) & BitMask.MakeZerosFromLeftLong(amount));
+    public static ulong RightNoCopy(ulong value, int amount) => (ulong)(Right(value, amount) & BitContainer.LongToULong(BitMask.MakeZerosFromLeftLong(amount)));
 }
