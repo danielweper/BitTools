@@ -27,7 +27,7 @@ public static class BitShift
     public static short RightNoCopy(short x, int amount) => (short)(Right(x, amount) & BitMask.MakeZerosFromLeftShort(amount));
     public static ushort RightNoCopy(ushort x, int amount) => (ushort)(Right(x, amount) & BitMask.MakeZerosFromLeftShort(amount));
     public static int RightNoCopy(int x, int amount) => (int)(Right(x, amount) & BitMask.MakeZerosFromLeftInt(amount));
-    public static uint RightNoCopy(uint x, int amount) => (uint)(Right(x, amount) & BitMask.MakeZerosFromLeftInt(amount));
+    public static uint RightNoCopy(uint x, int amount) => (uint)(Right(x, amount) & BitContainer.IntToUInt(BitMask.MakeZerosFromLeftInt(amount)));
     public static long RightNoCopy(long x, int amount) => (long)(Right(x, amount) & BitMask.MakeZerosFromLeftLong(amount));
-    public static ulong RightNoCopy(ulong x, int amount) => (ulong)(Right(x, amount) & BitMask.MakeZerosFromLeftLong(amount));
+    public static ulong RightNoCopy(ulong x, int amount) => (ulong)(Right(x, amount) & BitContainer.LongToULong(BitMask.MakeZerosFromLeftLong(amount)));
 }
