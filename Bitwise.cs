@@ -2,6 +2,16 @@ namespace BitTools;
 
 public static class Bitwise
 {
+    public static byte Complement(byte value) => (byte)(~value);
+	public static sbyte Complement(sbyte value) => (sbyte)(~value);
+	public static short Complement(short value) => (short)(~value);
+	public static ushort Complement(ushort value) => (ushort)(~value);
+	public static int Complement(int value) => ~value;
+	public static uint Complement(uint value) => ~value;
+	public static long Complement(long value) => ~value;
+	public static ulong Complement(ulong value) => ~value;
+
+
     public static byte Or(byte value1, byte value2) => (byte)(value1 | value2);
     public static sbyte Or(sbyte value1, sbyte value2) => (sbyte)(value1 | value2);
     public static short Or(short value1, short value2) => (short)(value1 | value2);
