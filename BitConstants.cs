@@ -4,14 +4,15 @@ public static class BitConstants
 {
     // INTEGRAL TYPES
     public const int BitsInByte = 8;
-    public const int BitsInShort = sizeof(short) * BitsInByte;
-    public const int BitsInInt = sizeof(int) * BitsInByte;
-    public const int BitsInLong = sizeof(long) * BitsInByte;
+    public const int BitsInShort = 16;
+    public const int BitsInInt = 32;
+    public const int BitsInLong = 64;
 
     // FLOATING POINT TYPES
-    public const int BitsInFloat = sizeof(float) * BitsInByte;
-    public const int BitsInDouble = sizeof(double) * BitsInByte;
+    public const int BitsInFloat = 32;
+    public const int BitsInDouble = 64;
+    public const int BitsInDecimal = 128;
 
     // CHARACTER TYPE
-    public const int BitsInChar = sizeof(char) * BitsInByte;
+    public const int BitsInChar = 16;
 }
