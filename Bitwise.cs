@@ -30,4 +30,14 @@ public static class Bitwise
     public static uint And(uint value1, uint value2) => value1 & value2;
     public static long And(long value1, long value2) => value1 & value2;
     public static ulong And(ulong value1, ulong value2) => value1 & value2;
+
+
+    public static byte Xor(byte value1, byte value2) => And(Or(value1, value2), Complement(And(value1, value2)));
+    public static sbyte Xor(sbyte value1, sbyte value2) => And(Or(value1, value2), Complement(And(value1, value2)));
+	public static short Xor(short value1, short value2) => And(Or(value1, value2), Complement(And(value1, value2)));
+	public static ushort Xor(ushort value1, ushort value2) => And(Or(value1, value2), Complement(And(value1, value2)));
+	public static int Xor(int value1, int value2) => And(Or(value1, value2), Complement(And(value1, value2)));
+	public static uint Xor(uint value1, uint value2) => And(Or(value1, value2), Complement(And(value1, value2)));
+	public static long Xor(long value1, long value2) => And(Or(value1, value2), Complement(And(value1, value2)));
+	public static ulong Xor(ulong value1, ulong value2) => And(Or(value1, value2), Complement(And(value1, value2)));
 }
